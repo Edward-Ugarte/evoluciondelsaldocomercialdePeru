@@ -1,0 +1,88 @@
+versión de Gretl 2025b
+Sesión actual: 2025-07-17 04:23
+
+? clear
+? 
+
+? setobs 12 2022:07
+Rango de datos completo: 2022:07 - 2025:12
+
+? open "datosmacro.gdt"
+
+
+
+Listando 10 variables:
+
+
+Evaluaciones de la función: 15
+Evaluaciones del gradiente: 8
+
+Modelo 1: ARIMA, usando las observaciones 2022:09-2025:06 (T = 34)
+
+
+             coeficiente   Desv. típica      z      valor p
+  ---------------------------------------------------------
+  const        0.294718      1.26065       0.2338   0.8152 
+  phi_1       −0.513598      0.159190     −3.226    0.0013  ***
+
+Media de la vble. dep.  0.588235   D.T. de la vble. dep.   12.77810
+Media de innovaciones   0.324682   D.T. innovaciones       11.00150
+R-cuadrado              0.237213   R-cuadrado corregido    0.237213
+Log-verosimilitud      −129.9301   Criterio de Akaike      265.8602
+Criterio de Schwarz     270.4393   Crit. de Hannan-Quinn   267.4218
+
+                       Real Imaginaria     Módulo Frecuencia
+  -----------------------------------------------------------
+  AR
+   Raíz  1          -1.9470     0.0000     1.9470     0.5000
+  -----------------------------------------------------------
+
+? summary
+
+                        Media        Mediana         Mínimo         Máximo
+index                  18.500         18.500         1.0000         36.000
+Tipo_Cambio            3.6709         3.6310         3.5630         3.8780
+Tasa_Interes           5.2639         5.1250         4.5000         6.2500
+Exportaciones          4695.6         4680.0         3280.0         6140.0
+Importaciones          3663.9         3595.0         2020.0         5470.0
+Reservas               296036         299355         282415         301832
+..
+                Desv. Típica.           C.V.      AsimetríaExc. de curtosis
+index                  10.536        0.56949        0.00000        -1.2019
+Tipo_Cambio           0.11281       0.030732        0.56047        -1.2408
+Tasa_Interes          0.71450        0.13574        0.19654        -1.6550
+Exportaciones          864.35        0.18408       0.049177        -1.1804
+Importaciones          1039.7        0.28377        0.15583        -1.1375
+Reservas                 6711       0.022670       -0.72554       -0.97413
+...
+
+                     Perc. 5%      Perc. 95%        Rango IQObservaciones ausentes
+index                  1.8500         35.150         18.500              0
+Tipo_Cambio            3.5630         3.8695        0.21800              0
+Tasa_Interes           4.5000         6.2500         1.5000              0
+Exportaciones          3348.0         6089.0         1500.0              0
+Importaciones          2096.5         5402.0         1777.5              0
+Reservas               283165         301832          11635              0
+...
+
+    predicción
+
+2022:07             
+2022:08       -10.00
+2022:09        20.00        -5.49
+2022:10        50.00         5.04
+2022:11        10.00        35.04
+2022:12        40.00        30.99
+
+  Estadísticos de evaluación de la predicción tilizando 4 observaciones
+
+  Error medio                           13.605
+  Raíz del Error cuadrático medio       29.066
+  Error absoluto medio                  26.125
+  Porcentaje de error medio            -2.6231
+  Porcentaje de error absoluto medio    122.57
+  U2 de Theil                           0.71723
+  Proporción de sesgo, UM               0.21911
+  Proporción de regresión, UR           0.49898
+  Proporción de perturbación, UD        0.28191
+
